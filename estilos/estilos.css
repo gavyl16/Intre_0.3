@@ -1,0 +1,275 @@
+header{
+    background-color: #fdf5eb;
+    margin: 30px;
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo-intre {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos uno sobre otro */
+    align-items: center;    /* Centra el texto y la línea */
+    text-align: center;
+}
+
+.logo-intre a{
+    text-decoration: none;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+   
+}
+
+.nombre-principal {
+    font-size: 1.5rem;      /* Tamaño grande para destacar */
+    letter-spacing: 10px;    /* Espaciado entre letras como en la imagen */
+    color: #333;            /* Gris muy oscuro/negro */
+    font-weight: 400;       /* No muy negrita, más elegante */
+    line-height: 1;
+    padding-left: 8px;
+}
+
+.linea-divisora {
+    height: 2px;            /* Grosor de la línea del logo */
+    width: 100%;            /* Ocupa todo el ancho de la palabra INTRE */
+    background-color: #5499c7; /* Color azul de la marca */
+    margin: 5px 0;          /* Espacio arriba y abajo de la línea */
+    align-items: center;
+}
+
+.especialidad {
+    font-size: 0.9rem;      /* Más pequeña que el nombre */
+    letter-spacing: 3px;    /* Mucho espacio entre letras para equilibrar */
+    color: #666;            /* Gris un poco más claro */
+}
+.navBarlist {
+    display: flex;
+    justify-content: center; /* Centra todo el grupo */
+    align-items: center;     /* Alinea verticalmente el texto con el logo */
+    list-style: none;
+    gap: 150px;               /* Espacio uniforme entre palabras y logo */
+    padding: 20px;
+}
+
+.enlace{
+    text-decoration: none;
+    color: #5499;
+    position: relative;
+    padding-bottom: 8px;
+    transition: color 0.3s;
+}
+.enlace::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #5499c7; /* El azul de tu logo INTRE */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.enlace:hover{
+    color: #5499c7;
+}
+.enlace:hover::after{
+    width: 100%;
+}
+.active::after{
+    width: 100%;
+    background-color: #5499c7;
+}
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #f8f9fb;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+/* ===== CONTENEDOR GENERAL ===== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, #e3f2f1, #f8f9fb);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* ===== BOTONES ===== */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #4db6ac;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #3aa79d;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #4db6ac;
+  color: #4db6ac;
+}
+
+.btn-secondary:hover {
+  background-color: #4db6ac;
+  color: white;
+}
+
+/* ===== SECCIONES ===== */
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.about p,
+.method p,
+.contact p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: #555;
+}
+
+/* ===== SERVICIOS ===== */
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== CONTACTO ===== */
+.contact {
+  background-color: #eef6f5;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 3rem 0;
+  }
+}
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #1f2a2e;
+  color: #eaeaea;
+  padding-top: 4rem;
+}
+
+.footer-content {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.footer h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer h4 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.footer p {
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #cfcfcf;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #4db6ac;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: #aaaaaa;
+}
