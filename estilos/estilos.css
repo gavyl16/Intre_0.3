@@ -32,7 +32,7 @@ header{
 .linea-divisora {
     height: 2px;            /* Grosor de la línea del logo */
     width: 100%;            /* Ocupa todo el ancho de la palabra INTRE */
-    background-color: #5499c7; /* Color azul de la marca */
+    background-color: #4db6ac; /* Color azul de la marca */
     margin: 5px 0;          /* Espacio arriba y abajo de la línea */
     align-items: center;
 }
@@ -53,7 +53,7 @@ header{
 
 .enlace{
     text-decoration: none;
-    color: #5499;
+    color: #4db6ac;
     position: relative;
     padding-bottom: 8px;
     transition: color 0.3s;
@@ -65,19 +65,19 @@ header{
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: #5499c7; /* El azul de tu logo INTRE */
+    background-color: #4db6ac; /* El azul de tu logo INTRE */
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
 .enlace:hover{
-    color: #5499c7;
+    color: #4db6ac;
 }
 .enlace:hover::after{
     width: 100%;
 }
 .active::after{
     width: 100%;
-    background-color: #5499c7;
+    background-color: #4db6ac;
 }
 /* ===== RESET ===== */
 * {
@@ -93,7 +93,10 @@ body {
   line-height: 1.6;
 }
 
+
 /* ===== CONTENEDOR GENERAL ===== */
+
+
 .container {
   width: 90%;
   max-width: 1100px;
@@ -101,7 +104,10 @@ body {
   padding: 4rem 0;
 }
 
+
 /* ===== HERO ===== */
+
+
 .hero {
   background: linear-gradient(135deg, #e3f2f1, #f8f9fb);
   padding: 6rem 2rem;
@@ -121,7 +127,10 @@ body {
   color: #555;
 }
 
+
 /* ===== BOTONES ===== */
+
+
 .btn-primary,
 .btn-secondary {
   display: inline-block;
@@ -153,7 +162,10 @@ body {
   color: white;
 }
 
+
 /* ===== SECCIONES ===== */
+
+
 section h2 {
   text-align: center;
   font-size: 2rem;
@@ -170,7 +182,14 @@ section h2 {
   color: #555;
 }
 
+
 /* ===== SERVICIOS ===== */
+
+
+.services{
+  background: linear-gradient(135deg, #e3f2f1, #f8f9fb);
+}
+
 .services-grid {
   display: grid;
   gap: 2rem;
@@ -218,7 +237,11 @@ section h2 {
     padding: 3rem 0;
   }
 }
+
+
 /* ===== FOOTER ===== */
+
+
 .footer {
   background-color: #1f2a2e;
   color: #eaeaea;
@@ -272,4 +295,43 @@ section h2 {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.9rem;
   color: #aaaaaa;
+}
+
+
+/* ===== CONTACTO ===== */
+
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+
+
+#psicoForm {
+    max-width: 400px;
+    background: #f9fbfd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.campo { margin-bottom: 15px; }
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #128C7E;
 }
