@@ -438,7 +438,12 @@ button:hover {
   align-items: flex-start;
 }
 
-
+.info-item img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
 
 .info-item p {
   font-size: 0.95rem;
