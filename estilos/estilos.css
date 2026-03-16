@@ -345,88 +345,48 @@ section h2 {
 
 
 /* ===== FORMULARIO DE CONTACTO ===== */
-
-#direction {
-  background: linear-gradient(135deg, #e3f2f1, #f8f9fb);
-  padding: 80px 40px;
-  margin-bottom: 40px;
-  border-radius: 20px;
-}
-#direction h1 {
-  margin-top: 20px;
-  text-align: center;
-  color: #128C7E;
-  padding-top: 30px;
-}
+/* Ajuste del contenedor principal para que sea flexible */
 .container-direction {
   display: flex;
-  gap: 40px;
-  align-items: center;
-  margin-top: 40px;
+  gap: 50px;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.map {
-  width: 100%;
-  max-width: 900px;
-  margin: 30px;
-  border-radius: 15px; 
-  overflow: hidden;    
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-.map iframe {
-  width: 100%;
-  display: block;
-}
-.contactos-container {
+
+/* Tarjeta del Formulario (Lado Izquierdo) */
+.contact-card-form {
   flex: 1;
-  font-size: 1.1em;
-  padding: 15px;
+  background-color: #f9fbfd; 
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
-.contactos-container p {
-  margin: 20px;
-  padding: 10px;
+
+.contact-card-form h3 {
+  color: #4db6ac;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  text-align: left;
 }
-.contactos-container h3 {
-  margin-bottom: 20px;
-  color: #128C7E;
-  text-align: center;
-  max-width: 600px;
+
+.contact-card-form label {
+  color: #2d2d2d;
+  font-size: 1rem;
+  margin-bottom: 5px;
 }
-#contacto {
+
+.contact-card-form input, 
+.contact-card-form textarea {
   background: #f9fbfd;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  margin: 20px;
-}
-#contacto h2 {
-  color: #128C7E;
-
-}
-#psicoForm {
-  max-width: 600px;
-  margin: 40px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.campo { 
-  display: flex;
-  flex-direction: column; 
-}
-.campo label {
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-.campo input, textarea {
-  padding: 10px;
-  border: 2px solid #ccc;
+  border: 2px solid #444;
+  color: #2d2d2d;
+  padding: 12px;
+  margin-bottom: 15px;
   border-radius: 8px;
-  font-size: 1em;
 }
-
 button {
-  background-color: #25D366; /* Verde WhatsApp */
+  background-color: #25D366;
   color: white;
   border: 2px solid #25D366;
   padding: 12px 20px;
@@ -434,10 +394,86 @@ button {
   cursor: pointer;
   font-weight: bold;
   width: 100%;
-  transition: 0.6s;
+  transition: 0.7s;
 }
-
 button:hover {
   background-color: white;
   color: #25D366;
+}
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #25D366;
+  outline: none;
+  box-shadow: 0 0 5px rgba(37, 211, 102, 0.5);
+}
+/* Lado Derecho: Grid de iconos */
+.contact-info-side {
+  flex: 1;
+  background-color: #f9fbfd; 
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.titulo-intre-brand {
+  color: #128C7E;
+  margin-bottom: 30px;
+  text-align: left !important;
+}
+
+.info-grid-custom {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Crea las 2 columnas */
+  gap: 40px 20px; /* Espacio vertical y horizontal */
+  margin-bottom: 40px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info-item img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.info-item p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 !important;
+}
+
+/* Mapa tipo "thumbnail" */
+/* Nuevo contenedor para el mapa abajo */
+.mapa-centrado {
+  width: 80%;            /* Ocupa el 80% horizontalmente */
+  height: 450px;         /* Altura del mapa */
+  margin: 50px auto 80px;   /* 'auto' lo centra horizontalmente y 50px de margen arriba */
+  border-radius: 20px;   /* Bordes redondeados para que pegue con tu diseño */
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); 
+}
+
+.mapa-centrado iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Responsividad para móviles */
+@media (max-width: 850px) {
+  .container-direction {
+    flex-direction: column;
+  }
+  .info-grid-custom {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
 }
