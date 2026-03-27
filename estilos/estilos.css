@@ -90,7 +90,6 @@ header{
   top: auto;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fdf5eb;
   min-width: 200px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -157,8 +156,23 @@ body {
   background: linear-gradient(135deg, #e3f2f1, #f8f9fb);
   padding: 6rem 2rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
+.hero-content {
+  margin: 0 auto;
+  flex: 1;
+}
+.hero-image {
+  flex: 1;
+}
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
 .hero h1 {
   font-size: 2.5rem;
   font-weight: 600;
@@ -227,6 +241,29 @@ section h2 {
   text-align: center;
   color: #555;
 }
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-image {
+  flex: 1;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  align-items: center;
+}
+.about .container {
+  flex: 1;
+  padding: 0 2rem;
+}
+
 
 
 /* ===== SERVICIOS ===== */
@@ -249,21 +286,95 @@ section h2 {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   text-align: center;
+  
+  /* Contenedor relativo para las capas */
+  position: relative;
+  overflow: hidden;
+  height: 250px; /* Altura fija para que el intercambio sea simétrico */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.card h3 {
-  margin-bottom: 1rem;
-  font-weight: 600;
+/* Estilo común para ambas capas */
+.card-front, .card-back {
+  width: 100%;
+  padding: 2rem;
+  transition: all 0.4s ease-in-out;
 }
 
-.card p {
-  color: #666;
-  font-size: 0.95rem;
+/* Capa del Título (Visible por defecto) */
+.card-front {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* Capa del Texto + Botón (Oculta abajo) */
+.card-back {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(30px); /* Viene desde abajo */
+  pointer-events: none;
+}
+.card-back p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* --- EL EFECTO HOVER --- */
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* El título sube y se desvanece */
+.card:hover .card-front {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+/* La descripción sube y aparece */
+.card:hover .card-back {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Estilo del botón */
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: #4db6ac;
+  color: white;
+  border: 1px solid #4db6ac;
+  text-decoration: none;
+  border-radius: 40%; /* Lo hace circular */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+  opacity: 1;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.btn-arrow:hover {
+  background-color: white;
+  transform: scale(1.1);
+  color: #4db6ac;
+}
+.card:hover .card-front {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.card:hover .card-back {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 /* ===== CONTACTO ===== */
