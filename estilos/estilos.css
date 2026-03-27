@@ -197,7 +197,7 @@ body {
   border-radius: 50px;
   text-decoration: none;
   font-weight: 500;
-  transition: all 1.5s ease;
+  transition: all 0.7s ease;
 }
 
 .btn-primary {
@@ -611,5 +611,97 @@ button:hover {
   }
   .info-grid-custom {
     grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}
+/* ===== RESPONSIVE MÓVILES ===== */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navBarlist {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .navBarlist li {
+    width: 100%;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  .hero-content,
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  /* ABOUT */
+  .about {
+    flex-direction: column;
+  }
+
+  .about .container {
+    padding: 0;
+  }
+
+  /* CARDS (SERVICIOS) */
+  .card {
+    height: auto; /* evita problemas en móvil */
+    padding: 1.5rem;
+  }
+
+  .card-front,
+  .card-back {
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  /* quitar efecto hover en móvil */
+  .card:hover .card-front,
+  .card:hover .card-back {
+    transform: none;
+    opacity: 1;
+  }
+
+  /* BOTONES */
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .enlaces-footer,
+  .contacto-footer {
+    margin: 0;
+    text-align: center;
+  }
+
+  .span-contacto,
+  .enlaces-footer span {
+    margin: 10px auto;
+  }
+
+  /* MAPA */
+  .mapa-centrado {
+    width: 95%;
+    height: 300px;
   }
 }
