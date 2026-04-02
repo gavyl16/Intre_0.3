@@ -129,12 +129,20 @@ header{
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+  height: 100%;
+}
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   background-color: #f8f9fb;
   color: #2d2d2d;
   line-height: 1.6;
+}
+main {
+  flex: 1;
 }
 
 
@@ -406,7 +414,7 @@ footer {
   justify-content: space-between;
   align-items: stretch;
   gap: 40px;
-  margin: auto;
+  margin: 0;
 }
 .enlaces-footer {
   margin-left: 20px;
